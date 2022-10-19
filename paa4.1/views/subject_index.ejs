@@ -1,0 +1,159 @@
+<html lang="en">
+  <%- include('partials/partials') %>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark" id="navbar">
+    <div class="container">
+        <a class="navbar-brand" href="/"><img class="logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+            <a class="nav-link" href="/teachers" id="#about">Teachers</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/students" id="#contact">Student</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="/subjects" id="#contact">Subject</a>
+          </li>
+        </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container main-box">
+  <h2><%= title %></h2>
+  <div class="container upper-box">
+    <div class="row">
+      <div class="col-sm-4 m-auto">
+        <a class="btn btn-sm btn-primary mt-4"  data-toggle="modal" data-target="#addSubject"><i class="fas fa-book"></i> Add</a><br/><br/>
+      </div>
+      <div class="col-sm-8 m-auto">
+        <form action="/subjects/search">
+          <div class="input-group">
+            <input type="search" name="term" class="form-control" placeholder="Name or Number" required>
+            <button class="btn btn-primary"><i class="fas fa-search"></i></button>
+          </div>
+        </form>
+      </div>
+      <div class="row ml-auto mr-auto mt-5">
+        <% if(message.length > 0) { %>
+          <div class="alert alert-info" id="alert">
+            <%= message %>
+          </div>
+          <% } %>
+      </div>
+    </div>
+  </div>
+  <a href="/subjects" class="refresh-btn">Refresh <i class="fas fa-sync"></i></a>
+  <div class="container lower-box"> 
+    <table class="table m-4 p-4">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Number</th>
+          <th>Transcript Load</th>
+          <th>Paying Load</th>
+          <th>Teaching Load</th>
+        </tr>
+      </thead>
+      <tbody>
+          <% subjects.forEach(function(subject){ %>
+              <tr>
+                  <td><%= subject.subject_id %></td>
+                  <td><%= subject.subject_title %></td>
+                  <td><%= subject.subject_no %></td>
+                  <td><%= subject.transcript_load %></td>
+                  <td><%= subject.paying_load %></td>
+                  <td><%= subject.teaching_load %></td>
+                  <!-- update modal -->
+                <div class="modal fade" id="updateSubject<%= subject.subject_id %>" tabindex="-1" role="dialog" aria-labelledby="updateSubject" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="updatesubject">Update a subject</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <form action="/subjects/update" method="post">
+                          <div class="form-group">
+                              <label for="subject_id" id="id-box">ID</label>
+                              <input class="id-box" type="number" value="<%= subject.subject_id %>" name="subject_id" readonly>
+                          </div>
+                          <div class="form-group">                      
+                            <input type="text" class="form-control" id="subject_title" placeholder="<%= subject.subject_title %>" value="<%= subject.subject_title %>" name="subject_title" required>
+                          </div>
+                          <div class="form-group">
+                            <input type="text" class="form-control" id="subject_no" placeholder="<%= subject.subject_no %>" value="<%= subject.subject_no %>" name="subject_no" required>
+                          </div>
+                          <div class="form-group">
+                            <input type="text" class="form-control" id="transcript_load" placeholder="<%= subject.transcript_load %>" value="<%= subject.transcript_load %>" name="transcript_load" required>
+                          </div>
+                          <div class="form-group">
+                            <input type="text" class="form-control" id="paying_load" placeholder="<%= subject.paying_load %>" value="<%= subject.paying_load %>" name="paying_load" required>
+                          </div>
+                          <div class="form-group">
+                            <input type="text" class="form-control" id="teaching_load" placeholder="<%= subject.teaching_load %>" value="<%= subject.teaching_load %>" name="teaching_load" required>
+                          </div>
+                          <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                  <td class="text-center">
+                    <a class="btn btn-sm btn-primary" data-toggle="modal" data-target="#updateSubject<%= subject.subject_id %>"><i class="fas fa-edit"></i> Update</a>
+                  </td>
+                  <td class="text-center">
+                    <a href="/subjects/delete/<%= subject.subject_id %>" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i> Delete</a>
+                  </td>
+              </tr>
+          <% }); %>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- add modal -->
+<div class="modal fade" id="addSubject" tabindex="-1" role="dialog" aria-labelledby="addSubject" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="addSubject">Add a Subject</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="/subjects/save" method="post">
+          <div class="form-group">
+              <input type="text" class="form-control" id="subject_title" placeholder="Enter Name" name="subject_title" required>
+          </div>
+          <div class="form-group">
+              <input type="text" class="form-control" id="subject_no" placeholder="Enter Number" name="subject_no" required>
+          </div>
+          <div class="form-group">
+              <input type="text" class="form-control" id="transcript_load" placeholder="Enter Transcript Load" name="transcript_load" required>
+          </div>
+          <div class="form-group">
+              <input type="text" class="form-control" id="paying_load" placeholder="Enter Paying Load" name="paying_load" required>
+          </div>
+          <div class="form-group">
+              <input type="text" class="form-control" id="teaching_load" placeholder="Enter Teaching Load" name="teaching_load" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>

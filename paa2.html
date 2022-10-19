@@ -1,0 +1,331 @@
+<!-- monthly grocery membership -->
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/paa2/logo.png" type="image/icon type">
+    <title>Panes PAA2 - Grocers</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f05435e1e7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/paa2.css">
+</head>
+<body>
+    <header class="header" id="landing">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white p-lg-0">
+            <div class="container">
+                <a class="navbar-brand" href="#">GROCERS</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                    <a class="nav-link" href="#landing">Home<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#plans">Plans</a>
+                        </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./paa2_login.html">My Account</a>
+                        </li>
+                </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 landing-text">
+                    <h5>monthly <span style="color: orange;">grocery</span> needs</h5>
+                    <p class="big-text">Made by you, <br> for you</p>
+                    <p>Delivered right at your doorstep!</p>
+                    <a class="btn btn-first" href="./paa2_register.html">Register</a>
+                    <a class="btn btn-second" href="#about">Learn More</a>
+                </div>
+                <div class="col-sm-6 landing-image">
+                    <img src="./assets/paa2/3.2.png" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="about" id="about">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="overlay-img" style="background-image: url(./assets/paa2/slider1.jpg);"></div>
+                    <div class="container">
+                        <h1>Customizable Kit</h1>
+                        <p>Choose between All-meat, All-vegan, or Mixed packages.</p>
+                    </div>
+                </div>
+              <div class="carousel-item data-interval=1000">
+                <div class="overlay-img" style="background-image: url(./assets/paa2/slider2.jpg);"></div>
+                    <div class="container">
+                        <h1>Safe and Secure</h1>
+                        <p>Monthly delivery right at your doorstep.</p>
+                    </div>
+              </div>
+              <div class="carousel-item">
+                <div class="overlay-img" style="background-image: url(./assets/paa2/slider3.jpg);"></div>
+                <div class="container">
+                    <h1>Affordable</h1>
+                    <p>Reasonable prices for quality products.</p>
+                </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </section>
+    <div class="down-box">
+        <a class="down-btn" href="#what"><i class="far fa-arrow-alt-circle-down"></i></a>
+    </div>
+    <section class="what" id="what">
+        <div class="container">
+            <div class="row">
+                <div class="col-md p-5" align="center">
+                    <!-- <div class="brand">
+                        <span style="color: orange; letter-spacing: 20px; font-size: 30px; font-weight: bolder; margin: 0px 20px;">GROCERS</span>
+                    </div> -->
+                    <h2>GROCERS</h2>
+                    <h1>What's in the monthly box?</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mt-3">
+                        <div class="product-1 align-items-center p-2 text-center">
+                            <img src="./assets/paa2/card1.png" class="rounded" width="160">
+                            <h5>Food</h5>
+                            <div class="mt-info">
+                                <span class="text1 d-block">This is customizeable.</span>
+                                <span class="text1">This is another sentence.</span>
+                            </div>
+                        </div>
+                        <div class="p-3 card1 text-center text-white mt-3 cursor">
+                            <a href="#plans"><span class="text-uppercase">explore</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mt-3">
+                        <div class="product-1 align-items-center p-2 text-center">
+                            <img src="./assets/paa2/card2.png" class="rounded" width="160px">
+                            <h5>Beverage</h5>
+                            <div class="mt-info">
+                                <span class="text1 d-block">This is customizeable.</span>
+                                <span class="text1">This is another sentence.</span>
+                            </div>
+                        </div>
+                        <div class="p-3 card2 text-center text-white mt-3 cursor">
+                            <a href="#plans"><span class="text-uppercase">explore</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mt-3">
+                        <div class="product-1 align-items-center p-2 text-center">
+                            <img src="./assets/paa2/card3.png" class="rounded" width="160px">
+                            <h5>RECIPES</h5>
+                            <div class="mt-info">
+                                <span class="text1 d-block">Food plan dependent.</span>
+                                <span class="text1">Receive a free recipe for the dish of the month.</span>
+                            </div>
+                        </div>
+                        <div class="p-3 card3 text-center text-white mt-3 cursor">
+                            <a href="#plans"><span class="text-uppercase">explore</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="down-box">
+        <a class="down-btn" href="#plans"><i class="far fa-arrow-alt-circle-down"></i></a>
+    </div>
+    <section class="plans" id="plans">
+        <div class="container">
+            <div class="row">
+                <div class="col-md p-5" align="center">
+                    <h2>GROCERS</h2>
+                    <h1>Available Plans</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mt-3" data-toggle="modal" data-target="#meatModal">
+                        <div class="product-1 align-items-center p-2 text-center">
+                            <a><img src="./assets/paa2/card4.png" class="rounded" width="160"></a>
+                            <h5>All-meat</h5>
+                            <div class="mt-info">
+                                <span class="text1 d-block">For the meat lovers.</span>
+                                <span class="text1">May include seafood if preferred.</span>
+                            </div>
+                        </div>
+                        <div class="p-2 card1 text-center text-white cursor">
+                            <ul>
+                                <li>Good for 1 to 2 persons:<br><span class="text-uppercase"> ₱3,500.00 / MONTH</span></li>
+                                <li>Good for 3 to 4 persons:<br><span class="text-uppercase"> ₱4,500.00 / MONTH</span></li>
+                                <li>Good for 5 and up persons:<br><span class="text-uppercase"> ₱5,500.00 / MONTH</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mt-3" data-toggle="modal" data-target="#vegModal">
+                        <div class="product-1 align-items-center p-2 text-center">
+                            <img src="./assets/paa2/card5.png" class="rounded" width="160px">
+                            <h5>All-vegetarian</h5>
+                            <div class="mt-info">
+                                <span class="text1 d-block">For the vegetable lovers.</span>
+                                <span class="text1">May include seafood if preferred.</span>
+                            </div>
+                        </div>
+                        <div class="p-2 card2 text-center text-white cursor">
+                            <ul>
+                                <li>Good for 1 to 2 persons:<br><span class="text-uppercase"> ₱2,500.00 / MONTH</span></li>
+                                <li>Good for 3 to 4 persons:<br><span class="text-uppercase"> ₱3,500.00 / MONTH</span></li>
+                                <li>Good for 5 and up persons:<br><span class="text-uppercase"> ₱4,500.00 / MONTH</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mt-3" data-toggle="modal" data-target="#mixModal">
+                        <div class="product-1 align-items-center p-2 text-center">
+                            <img src="./assets/paa2/card6.png" class="rounded" width="160px">
+                            <h5>Mixed</h5>
+                            <div class="mt-info">
+                                <span class="text1 d-block">Food plan dependent.</span>
+                                <span class="text1">May include seafood if preferred.</span>
+                            </div>
+                        </div>
+                        <div class="p-2 card3 text-center text-white cursor">
+                            <ul>
+                                <li>Good for 1 to 2 persons:<br><span class="text-uppercase"> ₱3,500.00 / MONTH</span></li>
+                                <li>Good for 3 to 4 persons:<br><span class="text-uppercase"> ₱4,500.00 / MONTH</span></li>
+                                <li>Good for 5 and up persons:<br><span class="text-uppercase"> ₱5,500.00 / MONTH</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <a class="btn btn-second" href="#landing">Back to Top</a> -->
+        </div>
+    </section>
+    <!-- meat modal -->
+    <div class="modal fade" id="meatModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">All-Meat Package</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">             
+                This package includes: <br> Red Meat – Beef, Goat, Lamb. <br>
+                Poultry – Chicken and Turkey. <br>
+                Pork – Pig's meat. <br><br>
+                May also include seafood if specified (+ ₱3,000.00).
+            </div>
+        </div>
+        </div>
+    </div>
+    <!-- veg modal -->
+    <div class="modal fade" id="vegModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">All-Vegetarian Package</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+                This package includes: <br>     
+                Fruits: Apples, bananas, berries, oranges, melons, pears, peaches. <br>
+                Vegetables: Leafy greens, asparagus, broccoli, tomatoes, carrots. <br>
+                Grains: Quinoa, barley, buckwheat, rice, oats. <br>
+                Legumes: Lentils, beans, peas, chickpeas. <br>
+                Nuts: Almonds, walnuts, cashews, chestnuts. <br>
+                Seeds: Flaxseeds, chia and hemp seeds. <br>
+                Healthy fats: Olive oil, avocados. <br>
+                Proteins: Tofu, seitan, natto, eggs, dairy products. <br><br>
+                May also include seafood if specified (+ ₱3,000.00).
+            </div>
+        </div>
+        </div>
+    </div>
+    <!-- mix modal -->
+    <div class="modal fade" id="mixModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Mixed Package</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">             
+                This package includes: <br>
+                Fruits and Vegetables. <br>
+                Red Meat - Beef. <br>
+                Pork - Pig's Meat. <br>
+                Poultry - Chicken and Turkey. <br><br>
+                May also include seafood if specified (+ ₱3,000.00).
+            </div>
+        </div>
+        </div>
+    </div>
+    <section class="footer">
+        <div class="footer-upper">
+            <div class="footer-text">
+                <h5>About GROCERS</h5>
+                <p>GROCERS is created by Julienne Andrea S. Panes in 2022. It is an online grocery monthly subscription platform that provides
+                    customers quality goods for a reasonable price, all in the safety of their homes. GROCERS allows you to customize your package
+                    that you can enjoy monthly. GROCERS is made by you, for you.</p>
+            </div>
+            <div class="footer-socials">
+                <h5>Follow Us</h5>
+                <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                <a href="https://iyabcd.github.io/CS2240/"><i class="fab fa-github"></i></a>
+            </div>
+            <div class="footer-contact">
+                <h5>Contact Us</h5>
+                  <p><i class="fas fa-home me-3"></i> Roxas Avenue , DC 8000, PH</p>
+                  <p>
+                    <i class="fas fa-envelope me-3"></i>
+                    info@grocers.ph
+                  </p>
+                  <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+                  <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+            </div>
+        </div>
+        <div class="copyright">
+                © 2021 Copyright:
+                <a class="text-reset fw-bold" href="./paa2.html#landing">grocers.ph</a>
+            </div>
+        </div>
+    </section>
+</body>

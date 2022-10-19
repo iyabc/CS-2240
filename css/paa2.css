@@ -1,0 +1,304 @@
+* {
+    padding: 0;
+    margin: 0;
+    /* font-family: 'PT Sans', sans-serif; */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+/* sections */
+.header .about .plans{
+    width: 100%;
+}
+/* navbar */
+.container .navbar-brand {
+    color: orange;
+    letter-spacing: 20px;
+    font-weight: bolder;
+    font-size: 24px;
+}
+.container ul li{
+    margin: 10px 30px;
+}
+/* top landing */
+.landing-text, .landing-image {
+    margin-top: 100px;
+}
+.container h5 {
+    text-transform: uppercase;
+}
+.big-text {
+    font-size: 62px;
+    color: darkorange;
+    font-weight: bolder;
+    line-height: 50px;
+}
+a.btn {
+    margin: 30px 10px;
+    width: 150px;
+    padding: 10px;
+    border-radius: 20px;
+}
+a.btn-first {
+    background-color: orange;
+    color: white;
+}
+a.btn-second {
+    color: orange;
+    border-color: darkorange;
+}
+a.btn:hover {
+    background-color: rgba(255, 72, 0, 0.877);
+    border-color: transparent;
+    color: white;
+    box-shadow: 5px 5px 10px rgba(255, 72, 0, 0.877);
+    transition: 0.3s;
+}
+/* about */
+.about {
+    color: white;
+    height: fit-content;
+    margin-bottom: 20px;
+}
+.about .container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-bottom: 50px;
+}
+.carousel-item {
+    /* position: relative; */
+    height: 32rem;
+    background-color: #ff9900;
+    background-position: center;
+    background-size: cover;
+}
+.overlay-img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.5;
+}
+/* what's in the box */
+.what {
+    text-align: center;
+    height: fit-content;
+}
+.what .container{
+    background-color: rgba(255, 72, 0, 0.877);
+    height: 90vh;
+    margin: 20px auto;
+    padding: 10px 20px;
+}
+.what .row {
+    color: white;
+    margin: 20px 0px;
+}
+.what .card {
+    border: none;
+    outline: none;
+    background-color: rgba(255, 136, 0, 0.795);
+    border-radius: 20px;
+    height: 350px;
+    border-radius: 20px;
+}
+.what .card a {
+    text-decoration: none;
+    color: white;
+}
+.what .card:hover {
+    transform:translateY(-15px);
+    transition: transform 0.3s;
+}
+.what .card h5 {
+    color: #ff9900;
+}
+.text1 {
+    font-size: 13px;
+    color: black;
+}
+.info {
+    line-height: 17px;
+}
+.product-1 {
+    background-color: #ffffff;
+}
+.card1:hover, .card2:hover, .card3:hover {
+    opacity: 0.8;
+}
+/* plans */
+.plans {
+    padding: 20px 0px;
+    height: fit-content;
+    text-align: center;
+}
+.plans .container {
+    height: 100vh;
+}
+.plans .row {
+    color: black;
+    margin: 20px 0px;
+}
+.plans .card {
+    border: none;
+    outline: none;
+    background-color: rgba(255, 136, 0, 0.795);
+    border-radius: 20px;
+    height: 27rem;
+    border-radius: 20px;
+}
+.plans .card a {
+    text-decoration: none;
+    color: white;
+}
+.plans .card:hover  {
+    transform:translateY(-15px);
+    transition: transform 0.5s;
+    cursor: pointer;
+}
+.plans .card:hover h5 {
+    color:black;
+}
+.plans .card:hover ul li {
+    color:black;
+}
+.plans .card h5 {
+    color: #ff9900;
+}
+.plans ul li {
+    list-style: none;
+}
+.plans h5 {
+    color: rgba(255, 72, 0, 0.877);
+}
+.plans .card1, .card2, .card3 {
+    font-size: 14px;
+}
+/* arrow */
+.down-box {
+    text-align: center;
+}
+.down-btn {
+    width: 50px;
+    height: 50px;
+    /* line-height: 50px; */
+    color: orange;
+    font-size: 28px;
+}
+.down-btn:hover {
+    color: rgba(255, 72, 0, 0.877);
+}
+/* footer */
+.footer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #575757;
+    margin-top: 30px;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.footer-upper {
+    display: flex;
+    width: 100%;
+    margin: 20px auto;
+    padding: 10px;
+    color: white;
+    flex: 1;
+    text-align: center;
+}
+.footer-upper h5 {
+    text-align: center;
+    color: orange;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+.footer-upper a {
+    margin: 30px;
+}
+.footer-text, .footer-contact, .footer-socials {
+    flex: 4;
+    margin: 0px 30px;
+    font-size: 16px;
+}
+.footer-socials {
+    text-align: center;
+}
+.footer-socials a {
+    color: white;
+}
+.copyright {
+    text-align: center;
+    color: white;
+    flex:1;
+}
+.copyright a {
+    text-decoration: none;
+    color: orange;
+}
+/* others */
+.what h2 {
+    color: orange;
+    letter-spacing: 20px; 
+    font-size: 30px; 
+    font-weight: bolder; 
+    margin: 0px 20px;
+}
+.plans h2 {
+    color: orange;
+    letter-spacing: 20px; 
+    font-size: 30px; 
+    font-weight: bolder; 
+    margin: 0px 20px;
+}
+
+@media screen and (max-width: 992px) {
+    body {
+        height: 100%;
+    }
+    .footer-upper {
+        display: block;
+        font: 20px;
+    }
+    .header .container .row {
+        text-align: center;
+    }
+    .about .container {
+        height: 100%;
+        padding: 10px;
+    }
+    .what .container {
+        height: 100%;
+        padding: 10px;
+    }
+    .plans .container {
+        height: 100%;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 350px){
+    .what h2 {
+        color: orange;
+        letter-spacing: 10px; 
+        font-size: 20px; 
+        font-weight: bolder; 
+        margin: 0px 20px;
+    }
+    .plans h2 {
+        color: orange;
+        letter-spacing: 10px; 
+        font-size: 20px; 
+        font-weight: bolder; 
+        margin: 0px 20px;
+    }
+}
+
